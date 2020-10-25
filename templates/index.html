@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>FIFA Player Market Value Predictor</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='football.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'>Market Value Predictor for </span><span class="heading_second">FIFA Players</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask, Deployed using Heroku.</p>
+    		</div>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+            <!-- FIFA Banner - 1 -->
+            <div class='fifa-banner-left'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-up">
+
+                        <!-- Image-1 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='ronaldo11.jpg') }}" alt="Ronaldo">
+                        </div>
+                        <!-- Image-2 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='messi1.jpg') }}" alt="Messi">
+                        </div>
+                        <!-- Image-3 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='Ibrahimovic1.jpg') }}" alt="Ibrahimovic">
+                        </div>
+                        <!-- Image-4 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='karim1.jpg') }}" alt="Karim">
+                        </div>
+                        <!-- Image-5 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='degea11.jpg') }}" alt="De Gea">
+                        </div>
+                        <!-- Image-6 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='neymar11.jpg') }}" alt="Neymar">
+                        </div>
+                        <!-- Image-7 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='sergio1.jpg') }}" alt="Sergio">
+                        </div>
+                        <!-- Image-8 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='suarez1.jpg') }}" alt="Suarez">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Prediction Form -->
+            <div class='div2'>
+                <form action="{{ url_for('predict') }}" method="POST">
+                    <input class="form-input" type="text" name="name" placeholder="Player's Name"><br>
+                    <input class="form-input" type="text" name="age" placeholder="Player's Age"><br>
+                    <input class="form-input" type="text" name="ball_skills" placeholder="Ball Skills"><br>
+                    <input class="form-input" type="text" name="defence" placeholder="Defence Skills"><br>
+                    <input class="form-input" type="text" name="mental" placeholder="Mental Skills"><br>
+                    <input class="form-input" type="text" name="passing" placeholder="Passing Skills"><br>
+                    <input class="form-input" type="text" name="physical" placeholder="Physical Skills"><br>
+                    <input class="form-input" type="text" name="shooting" placeholder="Shooting Skills"><br>
+                    <input class="form-input" type="text" name="goalkeeping" placeholder="Goalkeeping Skills"><br>
+
+			<input type="submit" class="myButton" value="Predict Value">
+        	</form>
+            </div>
+
+            <!-- FIFA Banner - 2 -->
+            <div class='fifa-banner-right'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-down">
+
+                        <!-- Image-1 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='ronaldo11.jpg') }}" alt="Ronaldo">
+                        </div>
+                        <!-- Image-2 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='messi1.jpg') }}" alt="Messi">
+                        </div>
+                        <!-- Image-3 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='Ibrahimovic1.jpg') }}" alt="Ibrahimovic">
+                        </div>
+                        <!-- Image-4 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='karim1.jpg') }}" alt="Karim">
+                        </div>
+                        <!-- Image-5 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='degea11.jpg') }}" alt="De Gea">
+                        </div>
+                        <!-- Image-6 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='neymar11.jpg') }}" alt="Neymar">
+                        </div>
+                        <!-- Image-7 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='sergio1.jpg') }}" alt="Sergio">
+                        </div>
+                        <!-- Image-8 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='suarez1.jpg') }}" alt="Suarez">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class= 'blank'>
+	<br>
+	<br>
+        </div>
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/anujvyas/IPL-First-Innings-Score-Prediction-Deployment"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/krishna-dalal-039692170"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ❤️ by Krishna Dalal.</p>
+       </div>
+
+    </body>
+</html>
