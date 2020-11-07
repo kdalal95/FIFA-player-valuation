@@ -66,7 +66,7 @@ Goalkeeping: Positioning, Diving, Handling, Kicking, Reflexes
 
 To fit the data, the regression models that we wish to compare are Linear Regression, Polynomial Regression and Random Forest Regressor.
 I have split the entire data frame into 80% Training Set and 20% Test set, where I hold out the Test Set for final model evaluation.
-The best score I got for the model was using Random Forest Regressor, and using that model I hvae further deployed the project.
+The best score I got for the model was using Random Forest Regressor, and using that model I have further deployed the project.
 
 
 ## Conclusion and Future 
